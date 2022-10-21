@@ -24,6 +24,9 @@ code {
 :active {
   outline: none;
 }
+a {
+  color: inherit;
+}
 a:focus,
 a:active {
   outline: none;
@@ -43,7 +46,7 @@ body {
   font-size: 100%;
   line-height: 1;
   font-size: 16px;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   color: #21243d;
 }
 input,
