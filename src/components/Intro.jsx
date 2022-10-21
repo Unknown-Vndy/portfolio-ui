@@ -14,6 +14,8 @@ function Intro () {
 export default Intro;
 
 const Flex = styled.div`
+  max-width: 855px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   @media (max-width: 800px) {

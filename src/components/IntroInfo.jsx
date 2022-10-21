@@ -20,6 +20,9 @@ export default IntroInfo;
 const Wrapper = styled.div`
   max-width: 505px;
   margin-bottom: 71px;
+  @media (max-width: 800px) {
+    margin-bottom: 51px;
+  }
 `;
 
 const IntroHeader = styled.h1`

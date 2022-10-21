@@ -29,6 +29,10 @@ function NavMenu () {
 export default NavMenu;
 
 const Menu = styled.nav`
+  max-width: 855px;
+  margin: 0 auto;
+  padding: 10px 10px 0px;
+
   display: flex;
   justify-content: flex-end;
   margin-bottom: 70px;
