@@ -1,30 +1,37 @@
 import styled from 'styled-components';
 import NavMenu from './components/NavMenu';
-import IntroInfo from './components/IntroInfo';
 import Intro from './components/Intro';
+import Posts from './components/Posts';
+import Footer from './components/Footer';
 
 function App () {
   return (
-    <Wrapper>
+    <>
+      <NavMenu />
       <HeaderWrapper>
-        <NavMenu />
         <Intro />
       </HeaderWrapper>
-    </Wrapper>
+
+      <PostsWrapper>
+        <Posts />
+      </PostsWrapper>
+
+      <Footer />
+    </>
   );
 }
 
 export default App;
 
-const Wrapper = styled.div`
-  max-width: 855px;
-  margin: 0 auto;
-`;
+// const Wrapper = styled.div`
+//   max-width: 855px;
+// `;
 
 const HeaderWrapper = styled.header`
   background: white;
-  margin-bottom: 71px;
-  @media (max-width: 800px) {
-    margin-bottom: 51px;
-  }
+`;
+
+const PostsWrapper = styled.div`
+  background: #edf7fa;
+  padding: 0 10px;
 `;
