@@ -18,14 +18,12 @@ function NavMenu () {
         ) : (
           <Close onClick={toggleHandler} />
         )}
-        <NavigationLink body={`Works`} />
-        <NavigationLink body={`Blog`} />
-        <NavigationLink body={`Contact`} />
+        <NavigationLink to='/works' body={`Works`} />
+        <NavigationLink to='/blog' body={`Blog`} />
+        <NavigationLink to='/contact' body={`Contact`} />
       </Links>
     </Menu>
   );
-}
-{
 }
 
 export default NavMenu;
@@ -33,6 +31,10 @@ export default NavMenu;
 const Menu = styled.nav`
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 70px;
+  @media (max-width: 800px) {
+    margin-bottom: 33px;
+  }
 `;
 
 const Links = styled.div`

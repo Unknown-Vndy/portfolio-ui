@@ -17,4 +17,5 @@ const Button = styled.button`
   line-height: 29px;
   font-weight: 500;
   overflow: hidden;
+  border: none;
 `;
