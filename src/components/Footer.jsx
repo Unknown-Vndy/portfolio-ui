@@ -36,7 +36,7 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const FooterLinks = styled.ul`
+const FooterLinks = styled.div`
   display: flex;
   justify-content: center;
   gap: 35px;
