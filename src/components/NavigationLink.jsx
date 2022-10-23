@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function NavigationLink ({ body }) {
-  return <Tab>{body}</Tab>;
+function NavigationLink ({ to, body }) {
+  return <Tab to={to}>{body}</Tab>;
 }
 
 export default NavigationLink;
 
-const Tab = styled(Link)`
+const Tab = styled(NavLink)`
   font-weight: 500;
   font-size: 20px;
   line-height: 29px;
