@@ -3,30 +3,10 @@ import NavigationLink from './NavigationLink';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
-const Menu = ({ open, setIsOpen }) => {
-  if (open)
-    return (
-      <>
-        <NavigationLink to={'/works'} body={`Works`} />
-        <NavigationLink to={'/blog'} body={`Blog`} />
-        <NavigationLink to={'/contact'} body={`Contact`} />
-      </>
-    );
-  else return;
-};
-
 function NavMenu () {
-  const [open, setIsOpen] = useState(false);
-  useEffect(() => {
-    console.log('open :>> ', open);
-  }, [open]);
   return (
     <MenuContainer>
-      <StyledMenu>
-        <Burger onClick={() => setIsOpen(!open)} />
-        <Menu open={open} />
-      </StyledMenu>
-
+      <Burger />
       <Links>
         <NavigationLink to={'/works'} body={`Works`} />
         <NavigationLink to={'/blog'} body={`Blog`} />
@@ -37,45 +17,6 @@ function NavMenu () {
 }
 
 export default NavMenu;
-
-const StyledMenu = styled.nav`
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: #effffa;
-  
-  /* @media (max-width: 576px) {
-    width: 100%;
-    height: 100vh;
-  } */
-
-  /* transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
-  transition: transform 0.3s ease-in-out; */
-
-  /* @media (max-width: 576px) {
-    width: 100%;
-  }
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #0d0c1d;
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-  } */
-`;
 
 const MenuContainer = styled.div`
   max-width: 855px;
@@ -106,9 +47,11 @@ const Burger = styled(AiOutlineMenu)`
   @media (min-width: 800px) {
     display: none;
   }
+  transition: 0.4s;
 `;
 
 const Close = styled(AiOutlineClose)`
   font-size: 2rem;
   cursor: pointer;
+  transition: 0.4s;
 `;
